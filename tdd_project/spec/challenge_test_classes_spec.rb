@@ -1,4 +1,4 @@
-require "challenge"
+require "challenge_test_classes"
 
 RSpec.describe GrammarStats do
     it "returns true if string begins with capital letter and ends with . , !, ?"do
