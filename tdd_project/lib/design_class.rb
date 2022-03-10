@@ -28,3 +28,30 @@ class Todo
         return list
     end
 end
+
+class Music_list
+
+    def initialize(track = "")
+        @tracks = [track]
+    end
+
+    def add_song(song)
+        @tracks = @tracks.push(song) 
+    end
+
+    def tracks 
+        if @tracks.length == 0
+            return "Tracks listened too: "
+        else 
+            "Tracks listened too: " + list
+        end
+    end
+
+    private
+    def list
+        # todo = @todos.each{ |t| puts t }
+        list = @tracks.join("")
+        return list
+    end
+
+end
