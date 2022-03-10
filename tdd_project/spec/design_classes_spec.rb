@@ -45,3 +45,21 @@ RSpec.describe Todo do
         end
     end
 end
+
+RSpec.describe Music_list do
+    it "returns empty list of tracks listened too no music has been listend too" do
+        music_list = Music_list.new()
+        expect(music_list.tracks).to eq "Tracks listened too: "
+    end
+
+    it "returns list of tracks if music has been listend too" do
+        music_list = Music_list.new("Best of you")
+        expect(music_list.tracks).to eq "Tracks listened too: Best of you"
+    end
+
+    it "adds a track to the ttrack list and then returns that list" do
+        music_list = Music_list.new()
+        music_list.add_song("Best of you")
+        expect(music_list.tracks).to eq "Tracks listened too: Best of you"
+    end
+end
