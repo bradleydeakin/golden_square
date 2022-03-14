@@ -13,7 +13,7 @@ RSpec.describe Todo do
         expect(task.done?).to eq true
     end
 
-    it "returns true when status is incomplete" do
+    it "returns false when status is incomplete" do
         task = Todo.new("go shopping")
         expect(task.done?).to eq false
     end
